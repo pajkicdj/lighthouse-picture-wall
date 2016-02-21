@@ -1,6 +1,11 @@
+$primaryColor: #FF0000;
+
 body {
   font-family: Verdana;
   font-size: 1.5em;
+  h1 {
+    color: $primaryColor;
+  }
 }
 
 #team-members {
