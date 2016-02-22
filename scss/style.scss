@@ -2,29 +2,72 @@ $primaryColor: #FF0000;
 
 body {
   font-family: Verdana;
-  font-size: 1.5em;
+  font-size: 1.0em;
   h1 {
-    color: $primaryColor;
+    font-family: 'Lora', serif; 
+    font-weight: 700; 
+    font-style: italic; 
+    font-size: 50px;
+    text-align: center;
+  }
+  h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 15px;
+    color: #003E4F;
+    border-bottom: thick solid;
+    padding-bottom: 25px;
   }
 }
 
-#team-members {
+.one {
+    position: relative;
+    -webkit-animation: mymove 1.5s;
+    animation: mymove 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@-webkit-keyframes mymove {
+    from {top: -30px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+
+@keyframes mymove {
+    from {top: -50px; opacity: 0;}
+    to {top: 0px; opacity: 1;}
+}
+
+main {
   clear: both;
-}
-
-#team-members .member {
-  float: left;
-  /*border: 1px solid gray;*/
-  margin: 10px;
-  padding: 6px;
-}
-
-#team-members .member img {
-  width: 200px;
-  height: 200px;
-}
-
-#team-members .member div.name {
-  text-align: center;  
+  padding-left: 70px;
+  padding-right: 70px;
+  .member {
+    float: left;
+    margin: 10px;
+    padding: 25px;
+    transition-duration: 0.3s;
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 100%;
+      box-shadow: 0px 2px 10px #3B8686, 0px 2px 30px #0B486B;
+    }
+    div.name {
+      text-align: center;
+      padding-top: 15px;
+    }
+    &:hover{
+      transform: scale(1.1);
+      -webkit-filter: saturate(150%);
+      filter: saturate(150%);
+      color: #3B8686;
+      font-style: italic; 
+    }
+  }
 }
 
